@@ -1,3 +1,4 @@
 {
-  "conventionalCommits.scopes": ["project"]
+  "conventionalCommits.scopes": ["project"],
+  "cSpell.words": ["localforage"]
 }
