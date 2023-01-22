@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["jest", "node", "cypress", "@testing-library/cypress"],
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -16,5 +17,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "jest.setup.js"]
+  "include": ["src", "jest.setup.js", "node_modules/cypress", "./cypress/**/*.{js,ts}"],
+  "exclude": ["node_modules", "cypress", "cypress.config.ts", "../cypress.config.ts"]
 }
