@@ -1,20 +1,24 @@
 {
   "env": {
     "browser": true,
+    "commonjs": true,
     "es2021": true,
-    "jest": true
+    "jest": true,
+    "node": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
     "plugin:jest/recommended",
-    "airbnb",
+    "plugin:testing-library/react",
     "prettier"
   ],
-  "plugins": ["react", "prettier", "@typescript-eslint", "jest"],
+  "plugins": ["prettier", "jest"],
   "parser": "@typescript-eslint/parser",
-  "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
@@ -37,7 +41,7 @@
     "no-unused-vars": "warn",
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".tsx"] }],
     "import/extensions": [
-      "error",
+      "warn",
       "ignorePackages",
       {
         "js": "never",
@@ -47,6 +51,31 @@
       }
     ]
   },
+  "overrides": [
+    {
+      "files": ["**/*.ts?(x)"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaFeatures": {
+          "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+      },
+      "plugins": ["@typescript-eslint"],
+      // You can add Typescript specific rules here.
+      // If you are adding the typescript variant of a rule which is there in the javascript
+      // ruleset, disable the JS one.
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-unused-expressions": "warn",
+        "@typescript-eslint/no-array-constructor": "warn",
+        "no-array-constructor": "off"
+        // etc.
+      }
+    }
+  ],
   "settings": {
     "react": {
       "version": "detect"
