@@ -3,16 +3,16 @@
 /** @returns {Promise<import('jest').Config>} */
 module.exports = async () => ({
   collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}'],
-  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   moduleDirectories: ['node_modules', 'src'],
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  transformIgnorePatterns: ['node_modules/(?!my-library-dir)/'],
-  testEnvironment: 'jsdom',
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   preset: 'ts-jest',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jsdom',
   transform: {
-    '^.+\\.(ts|tsx)?$': 'ts-jest',
+    '.+\\.(svg|css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
     '^.+\\.(js|jsx)$': 'babel-jest',
-    ".+\\.(svg|css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    '^.+\\.(ts|tsx)?$': 'ts-jest',
   },
+  transformIgnorePatterns: ['node_modules/(?!my-library-dir)/'],
   verbose: true,
 });
