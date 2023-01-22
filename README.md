@@ -6,7 +6,19 @@ The Leadster Frontend Code Challenge
 
 ## Decisions
 
-This project
+On this challenge I've made some decisions about the project organization and how structure it. In the following I'll show some decisions that I've made by some topics.
+
+### Tests
+
+I have some technique's to test, one of my decisions was to use [Testing Pyramid](https://www.headspin.io/blog/the-testing-pyramid-simplified-for-one-and-all) framework to deliver automated tests on this project. You can know more about it on the article: [What is a Testing Pyramid?](https://www.headspin.io/blog/the-testing-pyramid-simplified-for-one-and-all).
+
+Right now I'm applying the rule 60-30-10:
+
+- 60% - Unit tests;
+- 30% - Component/Integration tests;
+- 10% - E2E Tests;
+
+I choose the libraries such as [Jest](https://jestjs.io/docs/26.x/tutorial-react), [Testing Library](https://testing-library.com/docs/), and [Cypress](https://www.cypress.io) to use as my main testing tools.
 
 ### Commits
 
