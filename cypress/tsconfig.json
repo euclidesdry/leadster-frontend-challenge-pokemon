@@ -1,0 +1,5 @@
+// cypress/tsconfig.json
+{
+  "extends": "../tsconfig.json"
+  // ...
+}
