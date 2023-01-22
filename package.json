@@ -15,11 +15,17 @@
     "lint:fix": "eslint --fix src/**/*.{js,jsx,ts,tsx,json}",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md,json,scss} --config ./.prettierrc",
     "eject": "react-scripts eject",
+    "commit": "git-cz",
     "prepare": "husky install"
   },
   "lint-staged": {
     "./src/!(*test).{js,jsx,ts,tsx}": "eslint --fix",
     "./src/!(*test).{js,jsx,ts,tsx,css,md,json,scss}": "prettier --cache --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
@@ -45,9 +51,13 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "@typescript-eslint/parser": "^5.48.2",
     "babel-jest": "^29.3.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "8.2.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "^8.6.0",
