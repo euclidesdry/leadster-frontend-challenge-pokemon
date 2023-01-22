@@ -3,5 +3,5 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "conventionalCommits.scopes": ["project", "lint", "tests"],
-  "cSpell.words": ["localforage"]
+  "cSpell.words": ["Leadster", "localforage"]
 }
