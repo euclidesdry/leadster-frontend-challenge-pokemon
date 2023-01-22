@@ -24,6 +24,26 @@ I choose the libraries such as [Jest](https://jestjs.io/docs/26.x/tutorial-react
 
 The project commits are created following the [CommitLint](https://commitlint.js.org/) pattern, following the Conventional Commits specification for more readable commit messages. You can learn more about on the [Conventional Commits Website](https://www.conventionalcommits.org/en/v1.0.0/).
 
+Before each commit, or when you push a git change, the project have the configuration to verify code structure by linting tool and auto-fix when it's possible.
+
+But, you can also execute some commands to do that for you as the following, tho follow the [Conventional Commits Website](https://www.conventionalcommits.org/en/v1.0.0/) patterns:
+
+```bash
+git add .
+```
+
+and than:
+
+```bash
+npm run commit
+```
+
+or
+
+```bash
+yarn commit
+```
+
 ## Code Organization
 
 ## Features
