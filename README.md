@@ -102,6 +102,18 @@ or
 yarn lint
 ```
 
+### Testing features
+
+```bash
+npm run test
+```
+
+or
+
+```bash
+yarn test
+```
+
 ### Auto-fixing (Lint)
 
 ```bash
