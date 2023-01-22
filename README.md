@@ -2,7 +2,15 @@
 
 The Leadster Frontend Code Challenge
 
+---
+
 ## Decisions
+
+This project
+
+### Commits
+
+The project commits are created following the [CommitLint](https://commitlint.js.org/) pattern, following the Conventional Commits specification for more readable commit messages. You can learn more about on the [Conventional Commits Website](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ## Code Organization
 
@@ -10,7 +18,7 @@ The Leadster Frontend Code Challenge
 
 ## Instructions
 
-To run the code you will need to install [Node.JS v16](https://nodejs.org/download/release/v16.19.0/) relative to your OS installer
+To run the code you will need to install [Node.JS v16](https://nodejs.org/download/release/v16.19.0/), that was fully tested on it, relative to your OS installer
 
 With Node.js installed you can now run the project with the following commands:
 
