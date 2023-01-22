@@ -4,7 +4,7 @@ import AppRoutes from './routes/router';
 
 export default function App() {
   return (
-    <div className='App'>
+    <div className='App' data-testid='App'>
       <header className='App-header' />
       <AppRoutes />
     </div>
