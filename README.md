@@ -4,6 +4,8 @@ The Leadster Frontend Code Challenge
 
 ---
 
+The whole challenge goals is to use the [PokeAPI](https://pokeapi.co/) to filter, show up and interact with the API given pokemon's details, description and other information about the pokemon world. Therefore, in the next topics, we will explain more about the project **Decisions**, **Code Organization**, **Features**, and how to run the project on your local machine.
+
 ## Decisions
 
 On this challenge I've made some decisions about the project organization and how structure it. In the following I'll show some decisions that I've made by some topics.
