@@ -10,6 +10,12 @@ The whole challenge goals is to use the [PokeAPI](https://pokeapi.co/) to filter
 
 On this challenge I've made some decisions about the project organization and how structure it. In the following I'll show some decisions that I've made by some topics.
 
+### Technologies
+
+To build this project I used [ReactJS](https://reactjs.org) v18, [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5), [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) by [SASS](https://sass-lang.com) and [Styled Components](https://styled-components.com) and plenty others.
+
+I also used Tests Libraries as is explained in the following topic.
+
 ### Tests
 
 I have some technique's to test, one of my decisions was to use [Testing Pyramid](https://www.headspin.io/blog/the-testing-pyramid-simplified-for-one-and-all) framework to deliver automated tests on this project. You can know more about it on the article: [What is a Testing Pyramid?](https://www.headspin.io/blog/the-testing-pyramid-simplified-for-one-and-all).
