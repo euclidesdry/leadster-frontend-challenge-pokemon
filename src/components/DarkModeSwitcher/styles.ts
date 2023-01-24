@@ -7,6 +7,7 @@ export const Switcher = styled.div`
 
 export const Label = styled.label`
   /* color: white; */
+  font-size: 1.2rem;
   font-size: 15px;
   line-height: 1;
   margin-right: 15px;

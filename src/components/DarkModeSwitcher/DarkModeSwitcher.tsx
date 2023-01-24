@@ -6,7 +6,7 @@ import { useAppContext } from '../../contexts/App';
 export default function DarkModeSwitcher() {
   const { settings, toggleDarkMode } = useAppContext();
 
-  const labelText = settings.darkMode ? 'Dark mode' : 'Light mode';
+  const labelText = settings.darkMode ? 'Modo escuro' : 'Modo claro';
 
   return (
     <Switcher data-testid='DarkModeSwitcher-component'>
