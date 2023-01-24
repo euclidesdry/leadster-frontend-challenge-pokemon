@@ -15,12 +15,12 @@ describe('Switch component', () => {
 
     const switchButton = screen.getByRole('switch');
 
-    expect(screen.getByLabelText(/Light mode/)).toBeTruthy();
+    expect(screen.getByLabelText(/Modo claro/)).toBeTruthy();
 
     fireEvent.click(switchButton);
-    expect(screen.getByLabelText(/Dark mode/)).toBeTruthy();
+    expect(screen.getByLabelText(/Modo escuro/)).toBeTruthy();
 
     fireEvent.click(switchButton);
-    expect(screen.getByLabelText(/Light mode/)).toBeTruthy();
+    expect(screen.getByLabelText(/Modo claro/)).toBeTruthy();
   });
 });

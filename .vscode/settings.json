@@ -2,7 +2,18 @@
   "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "conventionalCommits.scopes": ["project", "lint", "tests", "page", "app", "component", "pkg", "styles", "types"],
+  "conventionalCommits.scopes": [
+    "project",
+    "lint",
+    "tests",
+    "page",
+    "app",
+    "component",
+    "pkg",
+    "styles",
+    "types",
+    "lang"
+  ],
   "cSpell.words": ["csstools", "Leadster", "localforage", "ruleset"],
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
