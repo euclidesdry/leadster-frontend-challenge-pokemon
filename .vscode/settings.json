@@ -2,8 +2,8 @@
   "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "conventionalCommits.scopes": ["project", "lint", "tests", "page", "app", "component"],
-  "cSpell.words": ["Leadster", "localforage", "ruleset"],
+  "conventionalCommits.scopes": ["project", "lint", "tests", "page", "app", "component", "pkg"],
+  "cSpell.words": ["csstools", "Leadster", "localforage", "ruleset"],
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
