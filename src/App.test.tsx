@@ -14,4 +14,15 @@ describe('App component', () => {
     const linkElement = screen.getByTestId('App');
     expect(linkElement).toBeTruthy();
   });
+
+  test('should have the Header component', () => {
+    render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    );
+
+    const headerComponent = screen.getByTestId('Header-component');
+    expect(headerComponent).toBeTruthy();
+  });
 });
