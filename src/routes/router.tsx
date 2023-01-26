@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import Home from './Home';
 import ErrorPage from './Error';
+import Details from './Details';
 // import About from './About';
 
 export default function AppRoutes() {
@@ -10,6 +11,7 @@ export default function AppRoutes() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/home' element={<Home />} />
+      <Route path='/pokemon/:id' element={<Details />} />
       {/* <Route path='/pokemon' element={<Pokemon />} /> */}
       {/* <Route path='/about' element={<About />} /> */}
       <Route path='*' element={<ErrorPage />} />
