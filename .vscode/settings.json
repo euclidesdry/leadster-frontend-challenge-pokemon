@@ -12,7 +12,8 @@
     "pkg",
     "styles",
     "types",
-    "lang"
+    "lang",
+    "hooks"
   ],
   "cSpell.words": ["csstools", "Leadster", "localforage", "ruleset"],
   "[javascript]": {
