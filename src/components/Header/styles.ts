@@ -5,6 +5,10 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 1048px) {
+    padding: 0 20px;
+  }
 `;
 
 export const LogoBox = styled.span`
@@ -12,6 +16,7 @@ export const LogoBox = styled.span`
   display: flex;
   flex-direction: row;
   gap: 10px;
+  cursor: pointer;
 `;
 
 export const Logo = styled.img`
