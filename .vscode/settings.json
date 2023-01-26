@@ -13,7 +13,8 @@
     "styles",
     "types",
     "lang",
-    "hooks"
+    "hooks",
+    "mock"
   ],
   "cSpell.words": ["csstools", "Leadster", "localforage", "ruleset"],
   "[javascript]": {
