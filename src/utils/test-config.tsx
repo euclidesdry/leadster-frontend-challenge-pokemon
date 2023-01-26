@@ -3,15 +3,18 @@ import React, { ReactElement } from 'react';
 import { RenderOptions, render } from '@testing-library/react';
 import AppProvider from '../contexts';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { BrowserRouter } from 'react-router-dom';
 
 const queryClient = new QueryClient();
 
 function AllTheProviders({ children }: { children: React.ReactNode }) {
   // eslint-disable-next-line react/jsx-no-useless-fragment
   return (
-    <QueryClientProvider client={queryClient}>
-      <AppProvider>{children}</AppProvider>;
-    </QueryClientProvider>
+    <BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+        <AppProvider>{children}</AppProvider>;
+      </QueryClientProvider>
+    </BrowserRouter>
   );
 }
 
