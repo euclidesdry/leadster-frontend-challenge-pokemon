@@ -14,7 +14,8 @@
     "types",
     "lang",
     "hooks",
-    "mock"
+    "mock",
+    "api"
   ],
   "cSpell.words": ["csstools", "Leadster", "localforage", "ruleset"],
   "[javascript]": {
