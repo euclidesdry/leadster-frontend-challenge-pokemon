@@ -1,4 +1,4 @@
-type ResultType = {
+export type ResultType = {
   name: string;
   url: string;
 };
