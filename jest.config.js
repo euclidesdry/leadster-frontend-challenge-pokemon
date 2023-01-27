@@ -3,6 +3,7 @@
 /** @returns {Promise<import('jest').Config>} */
 module.exports = async () => ({
   collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}'],
+  coveragePathIgnorePatterns: ['src/index.tsx'],
   moduleDirectories: ['node_modules', 'src'],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   preset: 'ts-jest',
