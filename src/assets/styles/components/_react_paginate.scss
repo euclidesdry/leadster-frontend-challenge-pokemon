@@ -27,8 +27,8 @@
     transition: all 0.3s ease;
 
     &--active {
-      background-color: #f53660;
-      border-color: #f53660;
+      background-color: #191919;
+      border-color: #191919;
       color: #fff;
     }
 
@@ -40,6 +40,7 @@
 
     &:hover {
       background-color: #f53660;
+      border-color: #f53660;
       color: #fff;
       transform: scale(1.1);
     }
