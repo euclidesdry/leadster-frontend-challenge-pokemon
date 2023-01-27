@@ -62,6 +62,15 @@ type TypesProps = {
   };
 };
 
+export type StatProps = {
+  base_stat: number;
+  effort: number;
+  stat: {
+    name: string;
+    url: string;
+  };
+};
+
 export type PokemonDetailsType = {
   abilities: PokemonAbilityProps[];
   base_experience: number;
@@ -81,7 +90,7 @@ export type PokemonDetailsType = {
     url: string;
   };
   sprites: SpritesProps;
-  stats: [];
+  stats: StatProps[];
   types: TypesProps[];
   weight: number;
 };
