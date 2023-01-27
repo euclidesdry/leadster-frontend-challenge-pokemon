@@ -34,6 +34,12 @@ export const TextInput = styled.input`
   outline: none;
 `;
 
+export const ClearButton = styled.button`
+  padding: 0 16px;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+`;
+
 export const SearchButton = styled.button`
   width: 148px;
   background-color: #262626;
