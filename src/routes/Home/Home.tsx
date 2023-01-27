@@ -63,11 +63,8 @@ export default function Home() {
     if (searchMutation.isError) {
       alert(`Oops!!: O pokemon "${searchTerm}" não foi encontrado!`);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchMutation.isError]);
-
-  React.useEffect(() => {
-    console.log('-- Pokemon Search: ', searchMutation.data, searchResult, pokemonData);
-  }, [pokemonData, searchMutation.data]);
 
   React.useEffect(() => {
     if (searchTerm.length > 0) {

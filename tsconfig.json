@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "types": ["jest", "node", "cypress", "@testing-library/cypress"],
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
