@@ -5,6 +5,7 @@ export type AppSettingsType = {
 
 export type AppPokemonType = {
   selected: number | null;
+  offset: number;
 };
 
 export type AppContextType = {
@@ -12,4 +13,5 @@ export type AppContextType = {
   pokemon: AppPokemonType;
   toggleDarkMode: () => void;
   setSelectedPokemon: (id: number | null) => void;
+  setOffset: (number: number) => void;
 };
