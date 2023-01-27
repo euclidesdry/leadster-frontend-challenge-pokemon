@@ -56,6 +56,12 @@ yarn commit
 
 ## Features
 
+The app has the following features:
+
+- Pokemon list with filter
+- Pokemon details page
+- Dark/Light team
+
 ## Instructions
 
 To run the code you will need to install [Node.JS v16](https://nodejs.org/download/release/v16.19.0/), that was fully tested on it, relative to your OS installer
