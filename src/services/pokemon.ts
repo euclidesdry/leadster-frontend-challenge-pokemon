@@ -10,3 +10,8 @@ export async function listPokemonInfoById(pokemonId: number): Promise<PokemonDet
   const response = await pokeApi.get<PokemonDetailsType>(`/pokemon/${pokemonId}`);
   return response.data;
 }
+
+export async function listPokemonInfoByName(name: string): Promise<PokemonDetailsType> {
+  const response = await pokeApi.get<PokemonDetailsType>(`/pokemon/${name}`);
+  return response.data;
+}
