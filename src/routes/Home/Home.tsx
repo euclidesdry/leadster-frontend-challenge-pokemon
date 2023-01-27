@@ -1,9 +1,9 @@
 import React from 'react';
 import Modal from 'react-modal';
-import { useQuery } from '@tanstack/react-query';
+import { useMutation, useQuery } from '@tanstack/react-query';
 import ReactPaginate, { ReactPaginateProps } from 'react-paginate';
 
-import { listPokemons } from '../../services/pokemon';
+import { listPokemonInfoByName, listPokemons } from '../../services/pokemon';
 
 import Layout from '../../components/Layout';
 import { Container } from './styles';
@@ -29,14 +29,28 @@ const customStyles = {
 
 export default function Home() {
   const { settings, pokemon, setOffset } = useAppContext();
+  const { offset, searchTerm } = pokemon;
 
-  const { data: pokemonData } = useQuery(['pokemon', pokemon.offset], () => listPokemons(ITEMS_LIMIT, pokemon.offset), {
+  const { data: pokemonData } = useQuery(['pokemon', offset], () => listPokemons(ITEMS_LIMIT, offset), {
     keepPreviousData: true,
     staleTime: 1000 * 60 * 60 * 1, // 1000ms * 60 seconds * 60min * 1h
   });
 
+  const searchMutation = useMutation((searchTerm: string) => listPokemonInfoByName(searchTerm));
+  const searchResult = searchMutation.data
+    ? [
+        {
+          name: searchMutation.data.name,
+          url: `https://pokeapi.co/api/v2/pokemon/${searchMutation.data.id}/`,
+        },
+      ]
+    : [];
+
   const pageCount = pokemonData?.count ? Math.ceil(pokemonData?.count / ITEMS_LIMIT) : 0;
   const totalItems = pokemonData?.count || 0;
+
+  const hasSearchData = searchResult && searchTerm.length > 0 && searchResult.length > 0 && searchMutation.isSuccess;
+  const pokemonDataToList = hasSearchData ? searchResult : pokemonData?.results;
 
   function handlePage(selectedItem: { selected: number }) {
     const newOffset = (selectedItem.selected * ITEMS_LIMIT) % totalItems;
@@ -45,12 +59,29 @@ export default function Home() {
     setOffset(newOffset);
   }
 
+  React.useEffect(() => {
+    if (searchMutation.isError) {
+      alert(`Oops!!: O pokemon "${searchTerm}" não foi encontrado!`);
+    }
+  }, [searchMutation.isError]);
+
+  React.useEffect(() => {
+    console.log('-- Pokemon Search: ', searchMutation.data, searchResult, pokemonData);
+  }, [pokemonData, searchMutation.data]);
+
+  React.useEffect(() => {
+    if (searchTerm.length > 0) {
+      searchMutation.mutate(searchTerm);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchTerm]);
+
   return (
     <Layout>
       <Container data-testid='Home-page' isDark={settings.darkMode}>
         <SearchBar />
 
-        <PokemonList data={pokemonData?.results} />
+        <PokemonList data={pokemonDataToList} />
 
         <div style={{ display: 'flex', justifyContent: 'center', padding: 16 }}>
           <ReactPaginate
