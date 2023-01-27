@@ -19,13 +19,6 @@ export default function Header() {
         <LogoText>PokeApp</LogoText>
       </LogoBox>
 
-      {/* <nav>
-        <ul>
-          <li>Página Inicial</li>
-          <li>Sobre</li>
-        </ul>
-      </nav> */}
-
       <DarkModeSwitcher />
     </HeaderContainer>
   );
