@@ -3,7 +3,7 @@ import { Layout, MainContainer } from './styles';
 import Header from '../Header';
 
 type AppLayoutProps = PropsWithChildren & {
-  rtl?: boolean;
+  theme?: string;
 };
 
 export default function AppLayout({ children }: AppLayoutProps) {
