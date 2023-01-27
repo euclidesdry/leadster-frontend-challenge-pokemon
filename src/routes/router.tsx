@@ -12,8 +12,6 @@ export default function AppRoutes() {
       <Route path='/' element={<Home />} />
       <Route path='/home' element={<Home />} />
       <Route path='/pokemon/:id' element={<Details />} />
-      {/* <Route path='/pokemon' element={<Pokemon />} /> */}
-      {/* <Route path='/about' element={<About />} /> */}
       <Route path='*' element={<ErrorPage />} />
     </Routes>
   );
