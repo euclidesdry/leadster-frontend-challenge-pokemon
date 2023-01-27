@@ -1,7 +1,6 @@
 import React from 'react';
-import Modal from 'react-modal';
 import { useMutation, useQuery } from '@tanstack/react-query';
-import ReactPaginate, { ReactPaginateProps } from 'react-paginate';
+import ReactPaginate from 'react-paginate';
 
 import { listPokemonInfoByName, listPokemons } from '../../services/pokemon';
 
@@ -12,20 +11,6 @@ import SearchBar from '../../components/SearchBar';
 import PokemonList from '../../components/PokemonList';
 
 const ITEMS_LIMIT = 15;
-
-const customStyles = {
-  content: {
-    bottom: 'auto',
-    left: '50%',
-    marginRight: '-50%',
-    right: 'auto',
-    top: '50%',
-    transform: 'translate(-50%, -50%)',
-  },
-  overlay: {
-    zIndex: 999999,
-  },
-} as Modal.Styles;
 
 export default function Home() {
   const { settings, pokemon, setOffset } = useAppContext();
@@ -104,20 +89,6 @@ export default function Home() {
           />
         </div>
       </Container>
-
-      {/* <Modal contentLabel='Escolha o pokemon' isOpen={Boolean(pokemon.selected)} style={customStyles}>
-        <div>
-          {' '}
-          <button
-            onClick={() => {
-              setSelectedPokemon(null);
-            }}
-          >
-            Fechar
-          </button>{' '}
-          Peixe Fresco
-        </div>
-      </Modal> */}
     </Layout>
   );
 }
