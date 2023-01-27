@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  min-height: calc(100vh - 360px);
   display: grid;
 
   grid-template-columns: calc(33.333% - 14px) calc(33.333% - 14px) calc(33.333% - 14px);
