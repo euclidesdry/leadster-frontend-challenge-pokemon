@@ -17,7 +17,7 @@
     "mock",
     "api"
   ],
-  "cSpell.words": ["csstools", "Leadster", "localforage", "ruleset"],
+  "cSpell.words": ["bulbasaur", "csstools", "Leadster", "localforage", "ruleset"],
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
