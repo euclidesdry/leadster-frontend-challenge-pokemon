@@ -1,5 +1,7 @@
 version = 1
 
+test_patterns = ["**/*.test.{js,jsx,ts,tsx}"]
+
 [[analyzers]]
 name = "shell"
 
@@ -14,3 +16,6 @@ name = "javascript"
     "browser",
     "cypress"
   ]
+
+[[transformers]]
+name = "prettier"
