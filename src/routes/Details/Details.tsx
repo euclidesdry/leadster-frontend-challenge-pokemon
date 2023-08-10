@@ -66,9 +66,7 @@ export default function Details() {
           </Navbar>
 
           <AbilitiesContainer>
-            {abilities?.map((ability, key) => (
-              <Ability key={ability}>{ability}</Ability>
-            ))}
+            {abilities?.map((ability, key) => <Ability key={ability}>{ability}</Ability>)}
           </AbilitiesContainer>
 
           <IconContainer>
