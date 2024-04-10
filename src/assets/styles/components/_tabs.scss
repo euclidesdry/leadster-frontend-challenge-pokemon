@@ -38,13 +38,17 @@ input {
 
   &:hover {
     color: rgb(101, 101, 101);
-    box-shadow: inset 0 -1px 0 0 currentColor, 0 1px 0 0 currentColor;
+    box-shadow:
+      inset 0 -1px 0 0 currentColor,
+      0 1px 0 0 currentColor;
     cursor: pointer;
   }
   &[data-state='active'] {
     font-weight: bold;
     color: var(--blackA);
-    box-shadow: inset 0 -1px 0 0 currentColor, 0 1px 0 0 currentColor;
+    box-shadow:
+      inset 0 -1px 0 0 currentColor,
+      0 1px 0 0 currentColor;
   }
   &:focus {
     position: relative;
